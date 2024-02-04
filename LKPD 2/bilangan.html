@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let angka = 1234567
+        juta = parseInt(angka / 1000000 )
+        ratusanRibu = parseInt(angka % 1000000 / 100000)
+        puluhanRibu = parseInt(angka % 100000 / 10000)
+        ribuan = parseInt(angka % 10000 / 1000)
+        ratusan = parseInt(angka % 1000 / 100)
+        puluhan = parseInt(angka % 100 /10)
+        satuan = parseInt(angka % 10)
+
+        console.log(juta + " Jutaan " + ratusanRibu + " Ratusan Ribu" + puluhanRibu + " Puluhan Ribu " + ribuan + " Ribuan " + ratusan + " Ratusan " + puluhan + " Puluhan " + satuan + " Satuan ")
+
+    </script>
+</body>
+</html>

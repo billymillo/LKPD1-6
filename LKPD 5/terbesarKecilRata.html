@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let largest = null;
+let smallest = null;
+let middle = null;
+let jumlah = 0;
+
+for (let nilai = 1; nilai <= 3; nilai++) {
+    let nilai = parseInt(prompt("Please enter"));
+    jumlah += nilai;
+  if (largest === null) {
+    largest = nilai;
+  } else if (nilai > largest) {
+    largest = nilai;
+  }
+  if (smallest === null) {
+    smallest = nilai;
+  } else if (nilai < smallest) {
+    smallest = nilai;
+  }
+
+}
+let rataRata = jumlah/3;
+let hasil = rataRata.toFixed(2);
+
+
+console.log("The largest value is:", largest);
+console.log("The smallest value is:", smallest);
+console.log("The middle value is:", jumlah);
+console.log("The middle value is:", hasil);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for (let i = 1; i <= 3; i++){
+        let siswa = prompt("Nama Siswa")
+
+        if(siswa){
+           let mtk = parseInt(prompt("Masukan Nilai Matematika"))
+           let indo = parseInt(prompt("Masukan Nilai Bahasa Indonesia"))
+           let inggris = parseInt(prompt("Masukan Nilai Bahasa Inggris"))
+           let dpk = parseInt(prompt("Masukan Nilai DPK"))
+           let agama = parseInt(prompt("Masukan Nilai Agama"))
+
+         if(mtk && indo && inggris && dpk && agama){
+            let jumlahNilai = mtk + indo + inggris + dpk + agama;
+            let kehadiran = parseInt(prompt("Kehadiran Siswa"))
+            if(jumlahNilai >= 475 && kehadiran >= 100){
+                console.log(`${siswa} Merupakan Siswa Terbaik dengan jumlah nilai ${jumlahNilai} dan kehadiran ${kehadiran}`)
+            } 
+            else {
+                console.log(`${siswa} Bukan Siswa terbaik dengan jumlah nilai ${jumlahNilai} dan kehadiran ${kehadiran}`)
+            }
+        }
+    }
+    }
+
+    </script>
+</body>
+</html>

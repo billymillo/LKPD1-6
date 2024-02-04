@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type ="text" id="nama">
+    <input type ="number" id="gaji">
+    <button id="" onclick=""></button>
+    <script>
+        var karyawan = document.querySelector("#nama");
+        let gajiPokok = 3000000;
+        tunjangan = 0.2 * gajiPokok;
+        pajak = 0.15 * (gajiPokok + tunjangan);
+        gajiBersih = gajiPokok + tunjangan - pajak;
+        console.log("Nama " + karyawan)
+        console.log("Gaji Awal " + gajiPokok)
+        console.log("Kamu Mendapatkan Tunjangan " + tunjangan)
+        console.log("Potongan Pajak Sebesar " + pajak)
+        console.log("Total Gaji Bulan ini " + gajiBersih)
+
+        function gajiPokok() {
+            
+        }
+    </script>
+</body>
+</html>

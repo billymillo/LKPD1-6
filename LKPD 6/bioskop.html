@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vip = parseInt(prompt("Jumlah Ticket VIP yang terjual"))
+        let hargaVip = 30000
+        hasilVip = vip * hargaVip
+        
+        let eksekutif = parseInt(prompt("Jumlah Ticket Eksekutif yang terjual"))
+        let hargaEksekutif = 20000
+        hasilEksekutif = eksekutif * hargaEksekutif
+
+        let ekonomi = parseInt(prompt("Jumlah Ticket Ekonomi yang terjual"))
+        let hargaEkonomi = 10000
+        hasilEkonomi = ekonomi * hargaEkonomi
+        keuntunganEkonomi = Math.round(hasilEkonomi * 0.07)
+        totalEkonomi = hasilEkonomi + keuntunganEkonomi
+
+        if(vip >= 35){
+            keuntunganVip = Math.round(hasilVip * 0.35)
+            totalVip = hasilVip + keuntunganVip
+        }else if(vip >= 20 && vip < 35){
+            keuntunganVip = Math.round(hasilVip * 0.15)
+            totalVip = hasilVip + keuntunganVip
+        }else {
+            keuntunganVip = Math.round(hasilVip * 0.5)
+            totalVip = hasilVip + keuntunganVip
+        }
+
+        if(eksekutif >= 40){
+            keuntunganEksekutif = Math.round(hasilEksekutif * 0.20)
+            totalEksekutif = hasilEksekutif + keuntunganEksekutif
+        }else if(eksekutif >= 20 && eksekutif < 40){
+            keuntunganEksekutif = Math.round(hasilEksekutif * 0.10)
+            totalEksekutif = hasilEksekutif + keuntunganEksekutif
+        }else{
+            keuntunganEksekutif = Math.Round(hasilEksekutif * 0.02)
+            totalEksekutif = hasilEksekutif + keuntunganEksekutif
+        }
+
+        keuntunganTicket = keuntunganVip + keuntunganEksekutif + keuntunganEkonomi;
+        totalTicketTerjual = vip + eksekutif + ekonomi;
+        pendapatan = totalVip + totalEksekutif + totalEkonomi
+
+        console.log(`Keuntungan Total Untuk Vip Adalah ${keuntunganVip}RP Dari Jumlah Ticket ${vip}`)
+        console.log(`Keuntungan Total Untuk Eksekutif Adalah ${keuntunganEksekutif}RP Dari Jumlah Ticket ${eksekutif}`)
+        console.log(`Keuntungan Total Untuk Ekonomi Adalah ${keuntunganEkonomi}RP Dari Jumlah Ticket ${ekonomi}`)
+        console.log(`Keuntungan Total Untuk Vip, Eksekutif, dan Ekonomi Adalah ${keuntunganTicket}RP Dari Jumlah Ticket Yang Terjual ${totalTicketTerjual}`)
+        console.log(`Total Pendapatan Yang Didapatkan Hari Ini Adalah ${pendapatan}RP `)
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = 123123 //JIKA DATA 02:59:59 bisa dicoba data lain seperti 02:13:23 | 02:13:59 | 02:59:59 | 23:59:59 
+        jam = Math.floor(data / 10000)
+        menit = Math.floor(data % 10000 / 100)
+        detik = Math.floor(data % 100) 
+        console.log(`Before : ${jam}:${menit}:${detik}`)
+        if(jam >= 23){
+            jam = 24
+            jam = jam % 24
+        }else if(jam != 23 && menit == 59){
+            jam = jam + 1
+        }
+        if(menit >= 59){
+            menit = 60
+            menit = menit % 60
+        }else if(menit != 59 && detik == 59){
+            menit = menit + 1
+        }
+        if(detik >= 59){
+            detik = 59
+            detik = detik % 59 - 1
+        }
+        console.log(`After : ${jam}:${menit}:${detik + 1}`)
+    </script>
+</body>
+</html>
